@@ -17,6 +17,7 @@ nav{
     background-color: rgba(2,6,23,0.8);
     position: sticky;
     top: 0%;
+    z-index: 9999;
 }
 a{
     display: inline-block;
@@ -139,7 +140,7 @@ a{
 }
 
 /* About */
-#about,#projects{
+#about{
     scroll-margin-top: 60px;
     height: 640px;
     background-color:  rgba(2,6,23,0.8) ;
@@ -195,11 +196,188 @@ a{
 }
 
 /* Skills */
+#skills{
+    scroll-margin-top: 60px;
+    display: flex;
+    justify-content: center;
+}
+#skillSection{
+    width: 65%;
+}
+#skillSection>h1{
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+.skillsContainer::-webkit-scrollbar{
+    display: none;
+    scrollbar-width: none;
+}
+.skillsContainer{
+    display: flex;
+    overflow-x: auto;
+    gap: 30px;
+    padding: 30px;
+}
+.skillsMainContainer{
+    position: relative;
+}
+.skillsMainContainer button{
+    position:absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgba(1, 1, 1, 0.5);
+    color: white;
+    font-size: 1.5em;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+button:hover{
+    cursor: pointer;
+    color: rgba(1, 1, 1, 0.5);
+    background-color:  white;
+}
+.left{
+    left: -50px;
+}
+.right{
+    right:-50px;
+}
+.card{
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #2f4664;
+    width: 200px;
+    height: 400px;
+    transition: all 0.3s ease;
+}
+.card:hover{
+    cursor: pointer;
+    box-shadow: 0 0 10px cyan;
+    transform: translateY(-10px);
+}
+.upperPart{
+    height:120px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.lowerPart{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.lowerPart>h4{
+    padding-top:5px ;
+}
+.lowerPart ul{
+    width: 95%;;
+}
+.lowerPart li{
+    font-size: 14px;
+    line-height: 24px;
+}
+.cardImg{
+    height: 120px;
+    width: 200px;
+    overflow: hidden;
+    border: 2px solid black;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cardImg img{
+    height:120px;
+}
 
+.percentageMeter{
+    margin: 10px 0px;
+    display: inline-block;
+    width: 70%;
+    height: 8px;
+    border-radius: 4px;
+    background-color: #b5b4b4;
+    overflow: hidden;
+}
+.percentage{
+    display: block;
+    height: 100%;
+    border-radius: 4px;
+    background: linear-gradient(90deg,rgb(55, 189, 246), rgb(153, 13, 184) );
+}
 
 /* projects */
-
-
+#projects{
+    scroll-margin-top: 60px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color:  rgba(2,6,23,0.8) ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#projectSection{
+    height: 100%;
+    width: 81%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+#projectSection>h1{
+    padding-bottom: 70px;
+}
+#projectsBox{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.projectBox{
+    border: 2px solid black;
+    border-radius: 10px;
+    background:rgb(15,23,42);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+.projectBox:hover{
+    transform: scale(1.02);
+    box-shadow: 0 0 50px 9px rgb(15,23,42);
+}
+.projectBox img{
+    height: 150px;
+    width: 100%;
+    transition: all 1s ease;
+}
+.projectBox img:hover{
+    transform: scale(1.05);
+}
+.projectDetails{
+    height: 150px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.projectDetails p{
+    color: rgb(164, 171, 180);
+    font-size: 14px;
+}
+.projectDetails a{
+    padding: 5px;
+    font-size: 12px;
+    border-radius: 5px;
+    background-color: rgb(24, 64, 100);
+}
+.projectDetails a:hover{
+    background-color:  rgb(31, 47, 84);
+    color: #1DA1F2;
+}
 
 /* Contact */
 #contact{
@@ -272,6 +450,6 @@ input:focus, textarea:focus{
     padding-bottom: 20px;
 }
 .contactWidth2 a{
-    width: 100%;
+    width: 95%;
     text-align: center;
 }
