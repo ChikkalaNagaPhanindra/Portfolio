@@ -88,8 +88,7 @@
                             <p>Location: Andhra Pradesh, India</p>
                         </div>
                         <div>
-                            <a href="https://drive.google.com/file/d/1D69_-SQsLvMEhGq1XyKZyEKXS33SWAlz/view?usp=drive_link"
-                                class="resumeDownload">Download Resume</a>
+                            <a href="https://drive.google.com/file/d/1D69_-SQsLvMEhGq1XyKZyEKXS33SWAlz/view?usp=drive_link" class="resumeDownload">Download Resume</a>
                             <a href="#contact" class="contactMe">Contact Me</a>
                         </div>
                     </div>
@@ -464,47 +463,49 @@
                         </div>
                     </div>
                     <h4>Connect with me</h4>
-                    <div class="socialMedia">
-                        <a href="https://github.com/ChikkalaNagaPhanindra/" class="github"><i
-                                class="fa-brands fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/phanindra-chikkala/" class="linkedin"><i
-                                class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="mailto:phanindra.chikkala@gmail.com" class="email"><i
-                                class="fa-solid fa-envelope"></i></a>
-                        <a href="https://wa.me/919133472694" class="whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
-                    </div>
+                        <div class="socialMedia">
+                            <a href="https://github.com/ChikkalaNagaPhanindra/" class="github"><i
+                                    class="fa-brands fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/phanindra-chikkala/" class="linkedin"><i
+                                    class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="mailto:phanindra.chikkala@gmail.com" class="email"><i
+                                    class="fa-solid fa-envelope"></i></a>
+                            <a href="https://wa.me/919133472694" class="whatsapp"><i
+                                    class="fa-brands fa-whatsapp"></i></a>
+                        </div>
                 </article>
                 <aside class="contactWidth2">
                     <h3>Send Me a Message</h3>
 
-                    <form id="contact-form">
+                    <form action="https://formsubmit.co/phanindra.chikkala@gmail.com" method="POST">
 
                         <div class="nameEmail">
 
                             <div>
-                                <label>Your Name</label>
-                                <input type="text" name="name" required>
+                                <label for="name">Your Name</label>
+                                <input type="text" name="name" id="name" required>
                             </div>
 
                             <div>
-                                <label>Your Email</label>
-                                <input type="email" name="email" required>
+                                <label for="email">Your Email</label>
+                                <input type="email" name="email" id="email" required>
                             </div>
 
                         </div>
 
                         <div>
-                            <label>Subject</label>
-                            <input type="text" name="subject" required>
+                            <label for="subject">Subject</label>
+                            <input type="text" name="subject" id="subject" required>
                         </div>
 
                         <div>
-                            <label>Message</label>
-                            <textarea name="message" rows="5" required></textarea>
+                            <label for="message">Message</label>
+                            <textarea name="message" id="message" cols="45" rows="5" required></textarea>
                         </div>
 
                         <button type="submit" class="hire">
                             Send Message
+                            <i class="fa-solid fa-right-to-bracket"></i>
                         </button>
 
                     </form>
@@ -513,44 +514,6 @@
         </div>
     </section>
     <script src="./script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-
-    <script>
-
-        // PUBLIC KEY
-        emailjs.init("Dj9RLbZ-A4lzfmcoD");
-
-        const form = document.getElementById("contact-form");
-
-        form.addEventListener("submit", function (e) {
-
-            e.preventDefault();
-
-            emailjs.sendForm(
-                "service_71ex1o5",
-                "template_oj1ho4y",
-                this
-            )
-
-                .then(() => {
-
-                    alert("Message Sent Successfully!");
-
-                    form.reset();
-
-                })
-
-                .catch((error) => {
-
-                    alert("Failed To Send Message");
-
-                    console.log(error);
-
-                });
-
-        });
-
-    </script>
 </body>
 
 </html>
