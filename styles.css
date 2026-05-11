@@ -182,7 +182,7 @@ a{
         position: absolute;
 
         top: 65px;
-        right: 0;
+        right: 0px;
 
         width: 220px;
 
@@ -206,12 +206,17 @@ a{
 
     .nav-menu.show{
         transform: translateX(0);
+        right: 0px;
     }
 
     .nav-menu a{
         width: 100%;
         font-size: 1rem;
     }
+    body,html{
+        overflow-x: hidden;
+    }
+    
 }
 
 /* ================================================= */
