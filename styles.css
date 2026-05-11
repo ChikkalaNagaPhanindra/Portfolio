@@ -164,11 +164,25 @@ a{
 @media (max-width: 768px){
 
     nav{
-        height: 65px;
-    }
+    width: 100%;
+    height: 70px;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    background-color: var(--nav-bg);
+    backdrop-filter: blur(10px);
+
+    z-index: 9999;
+    }
     .navBar{
         width: 92%;
+        position: relative;
     }
 
     /* HAMBURGER SHOW */
@@ -181,8 +195,8 @@ a{
     .nav-menu{
         position: absolute;
 
-        top: 65px;
-        right: 0px;
+        top: 51px;
+        right: -10px;
 
         width: 220px;
 
@@ -193,9 +207,7 @@ a{
 
         padding: 25px;
 
-        gap: 20px;
-
-        transform: translateX(100%);
+        transform: translateX(120%);
 
         transition: transform 0.4s ease;
 
@@ -206,7 +218,6 @@ a{
 
     .nav-menu.show{
         transform: translateX(0);
-        right: 0px;
     }
 
     .nav-menu a{
@@ -215,6 +226,9 @@ a{
     }
     body,html{
         overflow-x: hidden;
+    }
+    body{
+    /* padding-top: 70px; */
     }
     
 }
@@ -403,19 +417,19 @@ a{
 
 /* ICON COLORS */
 .github:hover{
-    background-color: black;
+    background-color: black !important;
 }
 
 .linkedin:hover{
-    background-color: #0A66C2;
+    background-color: #0A66C2 !important;
 }
 
 .email:hover{
-    background-color: #f24f1d;
+    background-color: #f24f1d !important;
 }
 
 .whatsapp:hover{
-    background-color: #25D366;
+    background-color: #25D366 !important;
 }
 
 /* ================================================= */
@@ -754,10 +768,12 @@ a{
 
     .paragraph{
         font-size: 0.95rem;
+        padding-left: 50px;
     }
 
     .details{
         grid-template-columns: 1fr;
+        padding-left: 80px;
     }
 }
 
@@ -1663,22 +1679,7 @@ a{
     transform: translateY(-4px);
 }
 
-/* INDIVIDUAL COLORS */
-.github:hover{
-    background-color: black;
-}
 
-.linkedin:hover{
-    background-color: #0A66C2;
-}
-
-.email:hover{
-    background-color: #f24f1d;
-}
-
-.whatsapp:hover{
-    background-color: #25D366;
-}
 
 /* ================================================= */
 /* ================= FORM SECTION ================== */
